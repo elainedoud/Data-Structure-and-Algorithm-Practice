@@ -1,6 +1,4 @@
-let n = []
-
-function areThereDuplicates(n) {
+function areThereDuplicates(...n) {
     
 
     const checker = {}
@@ -8,13 +6,16 @@ function areThereDuplicates(n) {
     for (let i = 0; i < n.length; i++) {
         let letter = n[i]
         checker[letter] ? checker[letter] += 1: checker[letter] = 1;
-        console.log(checker)
 }
-        console.log(n)
+
+    for (let j = 0; j < n.length; j++) {
+        let letter = n[j]
+        if (checker[letter] > 1) return true
+    }
+
+    return false
 
 }    
-
-areThereDuplicates('a','p','p','l','e')
 
 
 
@@ -25,4 +26,7 @@ areThereDuplicates('a','p','p','l','e')
 // false.  If the input is (1, 2, 2) OR if the input is (a, b, c, a) then the
 // answer is true
 
-// I don't think n is accepting a bunch of arguments
+// Now that both n and checker are working, we need to check checker for duplicates
+// Check to see how to determine if an item is in an object
+// Need to iterate through n by letter/number, than if letter/number is two or 
+// more in checker, need to return true
