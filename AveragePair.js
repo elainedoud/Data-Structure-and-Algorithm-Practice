@@ -2,20 +2,19 @@ function averagePair(arr, x){
 
     
     let i = 0;
-    let j = arr.length;
-    let thisSum = arr[i] + arr[j]
+    let j = arr.length - 1;
 
-for (let i = 0; i < arr.length; i ++) {
-    console.log(thisSum)
-    if (thisSum/2 === x){
+while (i < j) {
+    let avg = (arr[i] + arr[j])/2
+    if (avg === x){
         return true
     }
+    else if (avg < x) i++;
     else {
-        j++
+        break
     }
+    return false
 }
-return false
-
 }
 
 console.log(averagePair([1,2,4,6], 3))
