@@ -1,21 +1,24 @@
 function averagePair(arr, x){
 
-    let j
+    
+    let i = 0;
+    let j = arr.length;
+    let thisSum = arr[i] + arr[j]
 
-    for (let i = 0; j == arr.length -1 ; i < j){
-        let avg = (arr[i] + arr[j])/2
-        if (avg === x){
-            return true;
-        } else if (avg < x){
-            i++;
-    }   else  {
-        j--;
+for (let i = 0; i < arr.length; i ++) {
+    console.log(thisSum)
+    if (thisSum/2 === x){
+        return true
     }
-    console.log(i)
+    else {
+        j++
     }
 }
+return false
 
-console.log(averagePair([1,2,4,6], 9))
+}
+
+console.log(averagePair([1,2,4,6], 3))
 
 
 // What are we needing to complete?  We want two numbers in the array 
@@ -23,9 +26,13 @@ console.log(averagePair([1,2,4,6], 9))
 // return true.  If none of the numbers added equal the target, then 
 // return false.
 
-// Pseudo coding:  Need to have window #1 be first number in array
-// Then window #2 needs to iterate over all the other elements in array
-// If nothing is still found, window #1 should move one space up
+// Pseudo coding:  We have an array, and in this array we want to be able
+// to slide down the array
+// So, we want i to go 0, 1, 2, 3, ect - until it finds 
+// a sum that leads to the avg or hits the end of the array
+// If the end of the array is hit, then the second number, which was
+// previously arr[0], needs to be moved to arr[1], and we need to do it again
+// To do this, I think we can make j the second number and nest it within the for 
+// loop
 
-// I think I'm missing the "Sliding Window Pattern"; need to figure out how to
-// incorporate this pattern
+// Let's see if this works; if not - go step by step and console log each piece
