@@ -1,18 +1,42 @@
-let expression = happy;
+function isThisSwitch(expression){
 
     switch(expression){
-        case happy:
-            return "That's great!";
+        case "happy":
+            return ("That's great!");
          break;
-        case sad:
-            return "I'm sorry";
+        case "sad":
+            return ("I'm sorry");
          break;
         default:
-            return "Hello";
+            return ("Hello");
+}
 }
 
+//console.log(isThisSwitch("happy"));
+// It's working; switch syntax is an alternative to if/else statements
 
-// Something is wrong in the way I constructed this or 
-// what I'm trying to do here.  Recieving error saying happy
-// is not defined
-// Not yet working
+function thisIsPop(arr){
+let our_array = arr;
+return our_array.pop();
+}
+//console.log(thisIsPop(["nap", "hat", "cat"]));
+//Pop takes the last element of array and returns it;
+// Pop mutates the array
+
+function thisIsPush(arr){
+    let our_array = arr;
+    let new_array = our_array.push("bat");
+    return our_array;
+}
+//console.log(thisIsPush(["nap", "hat", "cat"]))
+
+// Push mutates the original array; if you ask for array to be returned it will have the 
+// new elements on the end of it
+
+function thisIsSearch(mystring){
+    return mystring.search('a')
+}
+
+//console.log(thisIsSearch('happy'))
+//Search will search for an element in a string and return the index of it.  For example, a is
+// 1 because it is the second letter of the string
