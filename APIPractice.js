@@ -19,7 +19,7 @@ async function pullAPI(url) {
 const input = 'https://the-one-api.dev/v2/character?limit=2&page=2&sort=name:asc'
 
 async function getCharacterData(url) {
-  const response = await fetch(input,{headers:{Authorization:'Bearer dFxFyh1MFWA-RFFCmZnh'}})
+  const response = await fetch(input,{headers:{Authorization:''}})
   const info = await response.json()
   console.log(info)
 }
