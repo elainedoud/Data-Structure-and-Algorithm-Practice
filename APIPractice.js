@@ -40,3 +40,18 @@ async function getCharacterData(url) {
     }
     
     }
+
+    let data ={
+      title: "Anne of Green Gables",
+    }
+
+    async function letsPostSomething(url, data){
+      const response = await fetch(input, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {"Content-Type": "application/json;"
+      }},)
+      const info = await response.json()
+      console.log(info)
+    }
+    
