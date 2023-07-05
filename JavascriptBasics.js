@@ -40,3 +40,22 @@ function thisIsSearch(mystring){
 //console.log(thisIsSearch('happy'))
 //Search will search for an element in a string and return the index of it.  For example, a is
 // 1 because it is the second letter of the string
+
+const myString = "Am I doing this right?"
+
+const firstString = myString.split('?')
+console.log(firstString)
+
+const secondString = myString.split('')
+console.log(secondString)
+
+const revisedString = secondString.join('')
+console.log(revisedString)
+
+function usingSplit(){
+const normUrl = input.split("?");
+const normParams = normUrl[1].split("&");
+const sortedParams = normParams.sort()
+return `${normUrl[0]}?${sortedParams.join(",")}`
+}
+
