@@ -44,13 +44,13 @@ function thisIsSearch(mystring){
 const myString = "Am I doing this right?"
 
 const firstString = myString.split('?')
-console.log(firstString)
+//console.log(firstString)
 
 const secondString = myString.split('')
-console.log(secondString)
+//console.log(secondString)
 
 const revisedString = secondString.join('')
-console.log(revisedString)
+//console.log(revisedString)
 
 function usingSplit(){
 const normUrl = input.split("?");
@@ -59,3 +59,5 @@ const sortedParams = normParams.sort()
 return `${normUrl[0]}?${sortedParams.join(",")}`
 }
 
+Math.min(2, 6, 1, 5) //Will return the lowest number
+Math.max(2, 6, 1, 5) //Will return the largest number
