@@ -24,10 +24,10 @@ function countOccurrences(obj, value) {
     key9: 'plum',
   };
   
-  const valueToCount = 'plum';
-  const occurrences = countOccurrences(myObject, valueToCount);
+ // const valueToCount = 'plum';
+ // const occurrences = countOccurrences(myObject, valueToCount);
   
-  console.log(`The value '${valueToCount}' occurs ${occurrences} times in the object.`);
+  //console.log(`The value '${valueToCount}' occurs ${occurrences} times in the object.`);
 
   //Above example I got offline
   //The method hasOwnProperty is a method to be used on an object that returns a boolean
@@ -43,9 +43,9 @@ function countOccurrences(obj, value) {
     return false;
 }
 
-  const cardDeck = {ones:'4', twos:'4', jack:'1', three:'3'};
+  //const cardDeck = {ones:'4', twos:'4', jack:'1', three:'3'};
 
-  console.log(keyTest(cardDeck))
+  //console.log(keyTest(cardDeck))
 
   function letsCount(obj, value){
     let count = 0;
@@ -57,4 +57,13 @@ function countOccurrences(obj, value) {
     return count;
   }
 
-  console.log(letsCount(cardDeck, '4'));
+  //console.log(letsCount(cardDeck, '4'));
+
+  var isEmpty = function(obj) {
+
+    console.log(obj.keys(obj).length)
+
+    return obj;
+ };
+
+ console.log(isEmpty(obj = {"x": 5, "y": 42}))
