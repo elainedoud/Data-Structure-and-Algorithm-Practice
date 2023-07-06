@@ -7,12 +7,15 @@ async function api_call(url){
             "Content-Type": "application/json"
 },})
     const info = await response.json();
-    console.log(info)
+    console.log(info);
+
     }
 
     console.log(api_call(url))
 
-    
+    //Next step: determine how to correctly parse the JSON data further in order to view specific info
+
+    //items.full_name and items.created_at
 
     //Using whatever language you like, and the Github API
 
