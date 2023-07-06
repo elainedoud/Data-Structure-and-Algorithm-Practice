@@ -1,5 +1,6 @@
 function capitalizeFirst (arr){
     let newArr
+    let capitalArr
 
     if (arr.length < 1){
         return newArr
@@ -7,6 +8,8 @@ function capitalizeFirst (arr){
     else {
         newArr = arr[arr.length - 1]
     }
+
+    if (arr.length < 1)
 }
 
 console.log(capitalizeFirst(['happy', 'sad', 'bad']))

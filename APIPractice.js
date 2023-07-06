@@ -54,4 +54,3 @@ async function getCharacterData(url) {
       const info = await response.json()
       console.log(info)
     }
-    
