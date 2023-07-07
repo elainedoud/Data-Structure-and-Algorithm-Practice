@@ -14,15 +14,27 @@ function countOccurrences(obj, value) {
   // Example usage
   const myObject = {
     key1: 'apple',
-    key2: 'banana',
+    key2: {
+      name: 'Henry',
+      age: '10'
+    },
     key3: 'apple',
     key4: 'orange',
     key5: 'apple',
     key6: 'plum',
     key7: 'plum',
     key8: 'plum',
-    key9: 'plum',
+    key9: 'plum'
   };
+
+  function pullingData(object){
+    for (let key in object){
+      if (object.hasOwnProperty(key) && key === "key2"){
+          let name = object[key].name
+          console.log(name)
+      }
+  }}
+  console.log(pullingData(myObject))
   
  // const valueToCount = 'plum';
  // const occurrences = countOccurrences(myObject, valueToCount);
@@ -66,4 +78,4 @@ function countOccurrences(obj, value) {
     return obj;
  };
 
- console.log(isEmpty(obj = {"x": 5, "y": 42}))
+// console.log(isEmpty(obj = {"x": 5, "y": 42}))

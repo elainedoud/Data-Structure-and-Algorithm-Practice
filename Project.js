@@ -12,6 +12,7 @@ async function api_call(url){
     }
 
     console.log(api_call(url))
+    
 
     //Next step: determine how to correctly parse the JSON data further in order to view specific info
 
